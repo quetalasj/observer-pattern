@@ -1,7 +1,5 @@
-//
-// Created by quetalasj on 11.03.2022.
-//
 #include "WeatherData.h"
+
 
 using namespace std;
 
@@ -10,12 +8,7 @@ void WeatherData::registerObserver(const shared_ptr<Observer> &o) {
 }
 
 void WeatherData::removeObserver(const shared_ptr<Observer> &o) {
-    for(int i=0; i < static_cast<int>(observers.size()); i++) {
-        if (&observers[i] == &o) {
-            observers.erase(observers.begin() + i);
-            break;
-        }
-    }
+    observers.remove(o);
 }
 
 void WeatherData::notifyObservers() {

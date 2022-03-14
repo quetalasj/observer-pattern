@@ -1,9 +1,4 @@
-//
-// Created by quetalasj on 11.03.2022.
-//
-
-#ifndef OBSERVER_PATTERN_SUBJECT_H
-#define OBSERVER_PATTERN_SUBJECT_H
+#pragma once
 #include "memory"
 #include "Observer.h"
 
@@ -16,4 +11,3 @@ public:
     virtual void notifyObservers() {};
 };
 
-#endif //OBSERVER_PATTERN_SUBJECT_H
